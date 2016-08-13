@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="21"
+    density="xxhdpi"
+    format="7"
+    timestamp="16028077878463"
+    token="4921303077055415688"
+    verifier="COMPATIBLE" >
+
+    <task
+        name="javac"
+        duration="27" />
+    <task
+        name="instant-run-dex"
+        duration="265" />
+    <task
+        name="instant-run-transform"
+        duration="2" />
+    <task
+        name="verifier"
+        duration="1" />
+
+    <artifact
+        location="/home/user/android_projects/trexgame/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
+
+    <build
+        timestamp="16028077878463"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/user/android_projects/trexgame/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+
+</instant-run>
