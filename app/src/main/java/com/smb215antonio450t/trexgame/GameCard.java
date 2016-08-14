@@ -22,6 +22,7 @@ public class GameCard {
     int y = 0;
     static int CardHeight = ((int) (GameMain.density * 45.0f));
     static int CardWidth = ((int) (30.0f * GameMain.density));
+    boolean IsBurned = false;
 
     public GameCard(String CardName, char CardType) {
         this.CardName = CardName;

@@ -1,57 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="21"
-    density="xxhdpi"
+    abi="x86_64"
+    api-level="23"
+    density="xhdpi"
     format="7"
-    timestamp="28423199877657"
-    token="4921303077055415688"
-    verifier="COMPATIBLE" >
+    timestamp="16005131165628"
+    token="4921303077055415688" >
 
     <task
         name="javac"
-        duration="31" />
+        duration="106" />
     <task
         name="instant-run-dex"
-        duration="253" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="6" />
+        duration="38" />
     <task
         name="verifier"
-        duration="0" />
+        duration="4" />
 
     <artifact
-        location="/home/user/android_projects/trexgame/app/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
+        location="/home/user/android_projects/trexgame/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
-    <build
-        timestamp="28370692499395"
-        verifier="COMPATIBLE" >
+    <build timestamp="16005131165628" >
         <artifact
-            location="/home/user/android_projects/trexgame/app/build/intermediates/builds/debug/28370692499395/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="28395346295289"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/user/android_projects/trexgame/app/build/intermediates/builds/debug/28395346295289/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="28407841932460"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/user/android_projects/trexgame/app/build/intermediates/builds/debug/28407841932460/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="28423199877657"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/user/android_projects/trexgame/app/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
+            location="/home/user/android_projects/trexgame/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
     </build>
 
 </instant-run>
