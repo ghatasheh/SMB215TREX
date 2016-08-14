@@ -10,10 +10,12 @@ import android.view.Display;
  */
 public class GameMain extends Activity{
     GameEngine complexGame;
+    public static float density;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        density = getResources().getDisplayMetrics().density;
         this.complexGame = new GameEngine(this);
         setContentView(this.complexGame);
         this.complexGame.requestFocus();

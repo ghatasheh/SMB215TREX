@@ -13,7 +13,7 @@ public class GameEngine extends View {
 
     Bitmap bm;
     int TableBg;
-
+    Context ct = getContext();
 
     public GameEngine(Context context) {
         super(context);
@@ -26,6 +26,11 @@ public class GameEngine extends View {
     public void onDraw(Canvas canvas) {
         this.bm = Bitmap.createScaledBitmap(this.bm, canvas.getWidth(), canvas.getHeight(), true);
         canvas.drawBitmap(this.bm, 0.0f, 0.0f, null);
+        GameCard GC,GC2;
+        GC = new GameCard("2",'s');
+        GC2 = new GameCard("14",'h');
+        GC.drawOneCard(0,0,canvas,ct);
+        GC2.drawOneCard(0,500,canvas,ct);
     }
 }
 

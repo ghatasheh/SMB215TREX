@@ -4,29 +4,50 @@
     api-level="21"
     density="xxhdpi"
     format="7"
-    timestamp="16028077878463"
+    timestamp="28423199877657"
     token="4921303077055415688"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="27" />
+        duration="31" />
     <task
         name="instant-run-dex"
-        duration="265" />
+        duration="253" />
     <task
         name="instant-run-transform"
-        duration="2" />
+        duration="6" />
     <task
         name="verifier"
-        duration="1" />
+        duration="0" />
 
     <artifact
         location="/home/user/android_projects/trexgame/app/build/intermediates/reload-dex/debug/classes.dex"
         type="RELOAD_DEX" />
 
     <build
-        timestamp="16028077878463"
+        timestamp="28370692499395"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/user/android_projects/trexgame/app/build/intermediates/builds/debug/28370692499395/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="28395346295289"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/user/android_projects/trexgame/app/build/intermediates/builds/debug/28395346295289/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="28407841932460"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/user/android_projects/trexgame/app/build/intermediates/builds/debug/28407841932460/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="28423199877657"
         verifier="COMPATIBLE" >
         <artifact
             location="/home/user/android_projects/trexgame/app/build/intermediates/reload-dex/debug/classes.dex"
