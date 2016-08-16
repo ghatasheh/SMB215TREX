@@ -23,6 +23,7 @@ public class GameCard {
     static int CardHeight = ((int) (GameMain.density * 45.0f));
     static int CardWidth = ((int) (30.0f * GameMain.density));
     boolean IsBurned = false;
+    int CardBack;
 
     public GameCard(String CardName, char CardType) {
         this.CardName = CardName;
@@ -252,4 +253,5 @@ public class GameCard {
         canvas.drawBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(context.getResources(), this.CardImage), CardWidth, CardHeight, true), (float) x, (float) y, null);
 
     }
+
 }

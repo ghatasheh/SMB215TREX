@@ -208,6 +208,10 @@
         "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/s5.png"
     },
     {
+        "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/cardbackvertical.png",
+        "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/cardbackvertical.png"
+    },
+    {
         "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/playtable.jpg",
         "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/playtable.jpg"
     },

@@ -17,7 +17,9 @@ public class GameEngine extends View {
     Context ct = getContext();
     GamePlayerCards pc;
     GameRandomCardShuffle randomCard;
-
+    GamePlayerCards pc1;
+    GamePlayerCards pc2;
+    GamePlayerCards pc3;
     public GameEngine(Context context) {
         super(context);
         this.TableBg = R.drawable.playtable;
@@ -35,20 +37,54 @@ public class GameEngine extends View {
         GC.drawOneCard(0,0,canvas,ct);
         GC2.drawOneCard(0,500,canvas,ct);*/
         GameCard[] Cardlist;
+        GameCard[] Cardlist2;
+        GameCard[] Cardlist3;
+        GameCard[] Cardlist4;
         this.pc = new GamePlayerCards();
         this.randomCard = new GameRandomCardShuffle();
+        this.pc1 = new GamePlayerCards();
+        this.pc2 = new GamePlayerCards();
+        this.pc3 = new GamePlayerCards();
         String st2 = "";
         for (int i = 0; i < 13; i++) {
             String st = this.randomCard.getRandom();
             this.pc.AddOneCard(new GameCard(st.trim().substring(1), st.charAt(0)));
             st2 = new StringBuilder(String.valueOf(st2)).append(" ").append(st).toString();
+            st = this.randomCard.getRandom();
+            this.pc1.AddOneCard(new GameCard(st.trim().substring(1), st.charAt(0)));
+            st2 = new StringBuilder(String.valueOf(st2)).append(" ").append(st).toString();
+            st = this.randomCard.getRandom();
+            this.pc2.AddOneCard(new GameCard(st.trim().substring(1), st.charAt(0)));
+            st2 = new StringBuilder(String.valueOf(st2)).append(" ").append(st).toString();
+            st = this.randomCard.getRandom();
+            this.pc3.AddOneCard(new GameCard(st.trim().substring(1), st.charAt(0)));
+            st2 = new StringBuilder(String.valueOf(st2)).append(" ").append(st).toString();
         }
+        Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf(st2));
 
         Cardlist = this.pc.NotBurnedCards();
+        Cardlist2 = this.pc1.NotBurnedCards();
+        Cardlist3 = this.pc2.NotBurnedCards();
+        Cardlist4 = this.pc3.NotBurnedCards();
         int i;
         for (i = 0; i < Cardlist.length; i++) {
             Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf( Cardlist[i].CardNum));
             Cardlist[i].drawOneCard(((canvas.getWidth() - ((GameCard.CardWidth + 14) * Cardlist.length)) / 2) + ((GameCard.CardWidth + 15) * i), (canvas.getHeight() - GameCard.CardHeight) - 10, canvas, ct);
+        }
+
+        for (i = 0; i < Cardlist2.length; i++) {
+            Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf( Cardlist2[i].CardNum));
+            Cardlist2[i].drawOneCard(((canvas.getWidth() - ((GameCard.CardWidth + 14) * Cardlist2.length)) / 2) + ((GameCard.CardWidth + 15) * i), 10, canvas,ct);
+        }
+
+        for (i = 0; i < Cardlist3.length; i++) {
+            Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf( Cardlist3[i].CardNum));
+            Cardlist3[i].drawOneCard(((canvas.getWidth() - ((GameCard.CardWidth + 14) * Cardlist3.length)) / 2) + ((GameCard.CardWidth + 15) * i), 200, canvas,ct);
+        }
+
+        for (i = 0; i < Cardlist4.length; i++) {
+            Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf( Cardlist4[i].CardNum));
+            Cardlist4[i].drawOneCard(((canvas.getWidth() - ((GameCard.CardWidth + 14) * Cardlist4.length)) / 2) + ((GameCard.CardWidth + 15) * i), 400, canvas,ct);
         }
 
     }
