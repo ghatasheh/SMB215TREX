@@ -4,38 +4,51 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="6169502708953"
-    token="4921303077055415688"
-    verifier="METHOD_DELETED" >
+    timestamp="10268201846326"
+    token="4921303077055415688" >
 
     <task
         name="javac"
-        duration="61" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="6" />
+        duration="0" />
     <task
         name="verifier"
-        duration="1" />
+        duration="0" />
 
-    <artifact
-        location="/home/user/android_projects/trexgame/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
-        type="DEX" />
-
-    <build timestamp="5556624807944" >
+    <build timestamp="1601598618181" >
         <artifact
             location="/home/user/android_projects/trexgame/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="6169502708953"
-        verifier="METHOD_DELETED" >
+        timestamp="9412485886510"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/home/user/android_projects/trexgame/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="9587627865181"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/home/user/android_projects/trexgame/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
         <artifact
             location="/home/user/android_projects/trexgame/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
             type="DEX" />
     </build>
+    <build
+        timestamp="9798268043776"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/user/android_projects/trexgame/app/build/intermediates/builds/debug/9798268043776/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build timestamp="10268201846326" />
 
 </instant-run>

@@ -74,17 +74,17 @@ public class GameEngine extends View {
 
         for (i = 0; i < Cardlist2.length; i++) {
             Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf( Cardlist2[i].CardNum));
-            Cardlist2[i].drawOneCard(((canvas.getWidth() - ((GameCard.CardWidth + 14) * Cardlist2.length)) / 2) + ((GameCard.CardWidth + 15) * i), 10, canvas,ct);
+            Cardlist2[i].drawVerticalClosedCard((((canvas.getWidth() / 2) - 65) - 25) + (i * 10), 10, canvas,ct);
         }
 
         for (i = 0; i < Cardlist3.length; i++) {
             Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf( Cardlist3[i].CardNum));
-            Cardlist3[i].drawOneCard(((canvas.getWidth() - ((GameCard.CardWidth + 14) * Cardlist3.length)) / 2) + ((GameCard.CardWidth + 15) * i), 200, canvas,ct);
+            Cardlist3[i].drawHorinzantolClosedCard((canvas.getWidth() - GameCard.CardHeight) - 10, (((canvas.getHeight() / 2) - 65) - 35) + (i * 10), canvas,ct);
         }
 
         for (i = 0; i < Cardlist4.length; i++) {
             Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf( Cardlist4[i].CardNum));
-            Cardlist4[i].drawOneCard(((canvas.getWidth() - ((GameCard.CardWidth + 14) * Cardlist4.length)) / 2) + ((GameCard.CardWidth + 15) * i), 400, canvas,ct);
+            Cardlist4[i].drawHorinzantolClosedCard(10, (((canvas.getHeight() / 2) - 65) - 35) + (i * 10), canvas,ct);
         }
 
     }

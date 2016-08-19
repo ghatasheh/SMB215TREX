@@ -24,6 +24,10 @@
         "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/s2.png"
     },
     {
+        "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/vertical.png",
+        "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/vertical.png"
+    },
+    {
         "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
         "source": "/home/user/android_projects/trexgame/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_item_background_holo_dark.xml"
     },
@@ -128,8 +132,16 @@
         "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/s11.png"
     },
     {
+        "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/table_grey.jpg",
+        "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/table_grey.jpg"
+    },
+    {
         "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/c2.png",
         "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/c2.png"
+    },
+    {
+        "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/table_purple.jpg",
+        "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/table_purple.jpg"
     },
     {
         "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/c5.png",
@@ -208,10 +220,6 @@
         "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/s5.png"
     },
     {
-        "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/cardbackvertical.png",
-        "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/cardbackvertical.png"
-    },
-    {
         "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/playtable.jpg",
         "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/playtable.jpg"
     },
@@ -240,12 +248,20 @@
         "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/d2.png"
     },
     {
+        "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/playtable2.jpg",
+        "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/playtable2.jpg"
+    },
+    {
         "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/c10.png",
         "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/c10.png"
     },
     {
         "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
         "source": "/home/user/android_projects/trexgame/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/horizontal.png",
+        "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/horizontal.png"
     },
     {
         "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
@@ -292,8 +308,16 @@
         "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/h8.png"
     },
     {
+        "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/playtable1.jpg",
+        "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/playtable1.jpg"
+    },
+    {
         "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/h2.png",
         "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/h2.png"
+    },
+    {
+        "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/table_orange.jpg",
+        "source": "/home/user/android_projects/trexgame/app/src/main/res/drawable/table_orange.jpg"
     },
     {
         "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",

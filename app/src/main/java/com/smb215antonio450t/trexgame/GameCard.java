@@ -20,10 +20,11 @@ public class GameCard {
     char CardType;
     int x = 0;
     int y = 0;
-    static int CardHeight = ((int) (GameMain.density * 45.0f));
-    static int CardWidth = ((int) (30.0f * GameMain.density));
+    static int CardHeight = ((int) (GameMain.density * 52.5f));
+    static int CardWidth = ((int) (35.0f * GameMain.density));
     boolean IsBurned = false;
-    int CardBack;
+    int CardBackVertical;
+    int CardBackHorizantal;
 
     public GameCard(String CardName, char CardType) {
         this.CardName = CardName;
@@ -244,14 +245,22 @@ public class GameCard {
     public void drawOneCard(int x, int y, Canvas canvas, Context context) {
         this.x = x;
         this.y = y;
-
-        RectF CardRect = new RectF((float) (x + 2), (float) (y - 2), (float) ((this.x + CardWidth) + 2), (float) ((this.y + CardHeight) + 2));
-        Paint paint = new Paint();
-        paint.setColor(Color.RED);
-        paint.setTypeface(Typeface.DEFAULT_BOLD);
-        canvas.drawRoundRect(CardRect, 3.0f, 3.0f, paint);
         canvas.drawBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(context.getResources(), this.CardImage), CardWidth, CardHeight, true), (float) x, (float) y, null);
 
     }
 
+    public void drawVerticalClosedCard(int x, int y, Canvas canvas, Context context) {
+        this.x = x;
+        this.y = y;
+        this.CardBackVertical = R.drawable.vertical;
+        canvas.drawBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(context.getResources(), this.CardBackVertical), CardWidth, CardHeight, true), (float) x, (float) y, null);
+
+    }
+
+    public void drawHorinzantolClosedCard(int x, int y, Canvas canvas, Context context) {
+        this.x = x;
+        this.y = y;
+        this.CardBackHorizantal = R.drawable.horizontal;
+        canvas.drawBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(context.getResources(), this.CardBackHorizantal),CardHeight ,CardWidth , true), (float) x, (float) y, null);
+    }
 }
