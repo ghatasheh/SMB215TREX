@@ -132,12 +132,12 @@
         "source": "/home/user/android_projects/trexgame/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_alert_dialog_material.xml"
     },
     {
-        "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
-        "source": "/home/user/android_projects/trexgame/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/support_simple_spinner_dropdown_item.xml"
-    },
-    {
         "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
         "source": "/home/user/android_projects/trexgame/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/home/user/android_projects/trexgame/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "/home/user/android_projects/trexgame/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
