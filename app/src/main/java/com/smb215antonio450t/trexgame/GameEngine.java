@@ -6,14 +6,16 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Point;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
 /**
  * Created by user on 8/13/16.
  */
-public class GameEngine extends View {
+public class GameEngine extends View implements View.OnTouchListener {
 
     Bitmap bm;
     int TableBg;
@@ -33,17 +35,30 @@ public class GameEngine extends View {
     Paint PlayerNames = new Paint();
     String CurrentTurn;
     int imgCrown;
+    Point TouchedPoint;
+    GameCard[] CardSet;
+    GameCard pCardOnTable = null;
+
     public GameEngine(Context context) {
         super(context);
+        setFocusable(true);
+        setFocusableInTouchMode(true);
+        setOnTouchListener(this);
         this.TableBg = R.drawable.playtable;
         this.bm = BitmapFactory.decodeResource(context.getResources(), this.TableBg);
         this.bm = Bitmap.createScaledBitmap(this.bm, this.bm.getWidth(), this.bm.getHeight(), true);
         this.imgCrown = R.drawable.crown;
+        setFocusable(true);
+        setFocusableInTouchMode(true);
+        setOnTouchListener(this);
+        this.CardSet = new GameCard[13];
 
     }
+
     public void drawCrown(Canvas canvas, float x, float y) {
         canvas.drawBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(ct.getResources(), this.imgCrown), 30, 30, true), x, y, null);
     }
+
     public void onDraw(Canvas canvas) {
         this.bm = Bitmap.createScaledBitmap(this.bm, canvas.getWidth(), canvas.getHeight(), true);
         canvas.drawBitmap(this.bm, 0.0f, 0.0f, null);
@@ -92,40 +107,40 @@ public class GameEngine extends View {
         canvas.drawText("**************", 400,400, this.PlayerNames);*/
         this.PlayerNames.setTextSize(25.0f);
         this.PlayerNames.setColor(Color.WHITE);
-        canvas.drawText(this.ps.name, (float) (((canvas.getWidth() / 2) - 150) - 80), (float) ((canvas.getHeight()-GameCard.CardHeight-50)), this.PlayerNames);
+        canvas.drawText(this.ps.name, (float) (((canvas.getWidth() / 2) - 150) - 80), (float) ((canvas.getHeight() - GameCard.CardHeight - 50)), this.PlayerNames);
         canvas.drawText(this.pe.name, (float) ((canvas.getWidth() - 80) - 10), (float) ((((canvas.getHeight() / 2) - 65) - 50) - 25), this.PlayerNames);
         canvas.drawText(this.pn.name, (float) (((canvas.getWidth() / 2) - 200) - 20), 25.0f, this.PlayerNames);
         canvas.drawText(this.pw.name, (float) (((GameCard.CardHeight / 2) - 5) - 15), (float) ((((canvas.getHeight() / 2) - 65) - 50) - 25), this.PlayerNames);
 
         int i;
         for (i = 0; i < Cardlists.length; i++) {
-            Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf( Cardlists[i].CardNum));
+            Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf(Cardlists[i].CardNum));
             Cardlists[i].drawOneCard(((canvas.getWidth() - ((GameCard.CardWidth + 14) * Cardlists.length)) / 2) + ((GameCard.CardWidth + 15) * i), (canvas.getHeight() - GameCard.CardHeight) - 10, canvas, ct);
         }
 
         for (i = 0; i < Cardliste.length; i++) {
-            Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf( Cardliste[i].CardNum));
-            Cardliste[i].drawVerticalClosedCard((((canvas.getWidth() / 2) - 65) - 25) + (i * 10), 10, canvas,ct);
+            Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf(Cardliste[i].CardNum));
+            Cardliste[i].drawVerticalClosedCard((((canvas.getWidth() / 2) - 65) - 25) + (i * 10), 10, canvas, ct);
         }
 
         for (i = 0; i < Cardlistn.length; i++) {
-            Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf( Cardlistn[i].CardNum));
-            Cardlistn[i].drawHorinzantolClosedCard((canvas.getWidth() - GameCard.CardHeight) - 10, (((canvas.getHeight() / 2) - 65) - 35) + (i * 10), canvas,ct);
+            Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf(Cardlistn[i].CardNum));
+            Cardlistn[i].drawHorinzantolClosedCard((canvas.getWidth() - GameCard.CardHeight) - 10, (((canvas.getHeight() / 2) - 65) - 35) + (i * 10), canvas, ct);
         }
 
         for (i = 0; i < Cardlistw.length; i++) {
-            Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf( Cardlistw[i].CardNum));
-            Cardlistw[i].drawHorinzantolClosedCard(10, (((canvas.getHeight() / 2) - 65) - 35) + (i * 10), canvas,ct);
+            Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf(Cardlistw[i].CardNum));
+            Cardlistw[i].drawHorinzantolClosedCard(10, (((canvas.getHeight() / 2) - 65) - 35) + (i * 10), canvas, ct);
         }
 
         this.ps.setPlayerCards(this.pcs);
         this.pe.setPlayerCards(this.pce);
         this.pn.setPlayerCards(this.pcn);
         this.pw.setPlayerCards(this.pcw);
-
+        this.CardSet = this.pcs.AllCardsDeck();
         if (this.ps.PlayerWithSevenOfHearts()) {
             this.CurrentTurn = "ps";
-            drawCrown(canvas, (float) (((canvas.getWidth() / 2) - 150) - 120), (float) ((canvas.getHeight()-GameCard.CardHeight-50)));
+            drawCrown(canvas, (float) (((canvas.getWidth() / 2) - 150) - 120), (float) ((canvas.getHeight() - GameCard.CardHeight - 50)));
             Toast.makeText(ct, "You Has The Seven of Heart", Toast.LENGTH_LONG).show();
         } else if (this.pe.PlayerWithSevenOfHearts()) {
             this.CurrentTurn = "pe";
@@ -142,8 +157,34 @@ public class GameEngine extends View {
         } else {
             Toast.makeText(ct, "Error ", Toast.LENGTH_LONG).show();
         }
+        if (this.pCardOnTable!= null){
+        this.pCardOnTable.drawCardOntable(canvas,ct,0,0);
+
+        }
 
 
     }
+
+    public boolean onTouch(View view, MotionEvent event) {
+        this.TouchedPoint = new Point();
+        this.TouchedPoint.x = (int) event.getX();
+        this.TouchedPoint.y = (int) event.getY();
+        int x1 = this.TouchedPoint.x;
+        int y1 = this.TouchedPoint.y;
+
+        int j = 0;
+        while (j < this.CardSet.length) {
+            if (this.CardSet[j].checkIfCardIsClicked((float) x1, (float) y1) && !CardSet[j].CardTouched) {
+                CardSet[j].CardTouched = true;
+                Log.println(Log.ERROR, "////////////////////", String.valueOf(CardSet[j].CardNum));
+                Log.println(Log.ERROR, "////////////////////", String.valueOf(CardSet[j].CardType));
+                this.pCardOnTable = CardSet[j];
+                invalidate();
+            }
+            j++;
+        }
+        return true;
+    }
+
 }
 

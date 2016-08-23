@@ -25,6 +25,8 @@ public class GameCard {
     boolean IsBurned = false;
     int CardBackVertical;
     int CardBackHorizantal;
+    int PlayerPosition =0; /*0 North*/
+    boolean CardTouched = false;
 
     public GameCard(String CardName, char CardType) {
         this.CardName = CardName;
@@ -263,4 +265,26 @@ public class GameCard {
         this.CardBackHorizantal = R.drawable.horizontal;
         canvas.drawBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(context.getResources(), this.CardBackHorizantal),CardHeight ,CardWidth , true), (float) x, (float) y, null);
     }
+
+    public boolean checkIfCardIsClicked(float x, float y) {
+        if (x < ((float) this.x) || x > ((float) (this.x + CardWidth)) || y < ((float) this.y) || y > ((float) ((this.y + this.y) + CardHeight))) {
+            return false;
+        }
+        return true;
+    }
+
+    public void drawCardOntable(Canvas canvas, Context context, int shiftX, int shiftY) {
+        int w = canvas.getWidth();
+        int h = canvas.getHeight();
+        if (this.PlayerPosition == 0) {
+            this.x = (w / 2) - (CardWidth / 2);
+            this.y = h / 2;
+        }
+        this.x += shiftX * 5;
+        this.y += shiftY * 5;
+        canvas.drawBitmap(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(context.getResources(), this.CardImage), CardWidth, CardHeight, true), (float) this.x, (float) this.y, null);
+        this.IsBurned = true;
+    }
+
+
 }
