@@ -27,11 +27,16 @@ public class GameCard {
     int CardBackHorizantal;
     int PlayerPosition =0; /*0 North*/
     boolean CardTouched = false;
+    int Player = 0;
 
-    public GameCard(String CardName, char CardType) {
+
+
+    public GameCard(String CardName, char CardType,int Player) {
         this.CardName = CardName;
         this.CardNum = Integer.valueOf(this.CardName.trim()).intValue();
         Log.println(Log.ERROR, "++++++++++++++++++++", String.valueOf(CardNum));
+        this.CardType = CardType;
+        this.Player = Player;
 
         this.CardType = CardType;
         if (this.CardName.trim().compareTo("11") == 0) {
@@ -259,7 +264,7 @@ public class GameCard {
 
     }
 
-    public void drawHorinzantolClosedCard(int x, int y, Canvas canvas, Context context) {
+    public void drawHorinzontalClosedCard(int x, int y, Canvas canvas, Context context) {
         this.x = x;
         this.y = y;
         this.CardBackHorizantal = R.drawable.horizontal;
@@ -276,9 +281,18 @@ public class GameCard {
     public void drawCardOntable(Canvas canvas, Context context, int shiftX, int shiftY) {
         int w = canvas.getWidth();
         int h = canvas.getHeight();
-        if (this.PlayerPosition == 0) {
+        if (this.Player == 0) {
             this.x = (w / 2) - (CardWidth / 2);
             this.y = h / 2;
+        } else if (this.Player == 1) {
+            this.x = (w / 2) + CardWidth;
+            this.y = (h / 3) + (h / 12);
+        } else if (this.Player == 2) {
+            this.x = (w / 2) - (CardWidth / 2);
+            this.y = h / 3;
+        } else if (this.Player == 3) {
+            this.x = (w / 2) - (CardWidth * 2);
+            this.y = (h / 3) + (h / 12);
         }
         this.x += shiftX * 5;
         this.y += shiftY * 5;

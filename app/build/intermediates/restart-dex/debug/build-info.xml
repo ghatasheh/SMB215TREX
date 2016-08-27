@@ -4,27 +4,27 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="10714583740796"
+    timestamp="40899272489819"
     token="4921303077055415688" >
 
     <task
         name="javac"
-        duration="82" />
+        duration="91" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="32" />
+        duration="30" />
     <task
         name="verifier"
-        duration="4" />
+        duration="5" />
 
     <artifact
         location="/home/user/android_projects/trexgame/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="10714583740796" >
+    <build timestamp="40899272489819" >
         <artifact
             location="/home/user/android_projects/trexgame/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />

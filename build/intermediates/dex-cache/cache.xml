@@ -12,7 +12,7 @@
         jar="/home/user/android_projects/trexgame/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="47d21899ac0d760689ab771400501764f97d8ce5">
+        sha1="d370e30c3d77bc5b403f329395b8b207676c78c1">
         <dex dex="/home/user/android_projects/trexgame/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_7f9813c9f21ce3af6799e22654adb6129aaf773a/classes.dex" />
     </item>
     <item
@@ -47,7 +47,7 @@
         jar="/home/user/android_projects/trexgame/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="a69845b5ce62592eb8a454d62bd4a9efc63d9eba">
+        sha1="255492fbf25592ab833b241b48020cce52f11ba8">
         <dex dex="/home/user/android_projects/trexgame/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cf500251f5fdb89bf6998976eb504a65032e2bf3/classes.dex" />
     </item>
     <item
